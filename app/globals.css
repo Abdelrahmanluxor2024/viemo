@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --plyr-color-main: #00adef;
+  --plyr-video-background: #000000;
+  --plyr-range-track-height: 4px;
+  --plyr-range-thumb-height: 12px;
+  --plyr-range-thumb-width: 12px;
+  --plyr-font-family: inherit;
+  --plyr-control-icon-size: 16px;
+  --plyr-control-spacing: 10px;
+}
+
+body {
+  color: #111827;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Plyr tweaks for ultra clean minimalist Vimeo look */
+.plyr {
+  font-family: inherit !important;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.plyr--video {
+  background: #000000;
+}
+
+.plyr__controls {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)) !important;
+  padding: 14px !important;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.plyr__control--overlaid {
+  background: rgba(0, 173, 239, 0.9) !important;
+  border-radius: 50% !important;
+  padding: 16px !important;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.plyr__control--overlaid:hover {
+  background: #00adef !important;
+  transform: scale(1.08);
+}
+
+.plyr__menu__container {
+  background: #18181b !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  border: 1px solid #27272a;
+  font-size: 13px !important;
+}
+
+/* Standalone embed styling */
+.embed-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.embed-container .plyr {
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+.embed-container .plyr__video-wrapper {
+  height: 100% !important;
+}
+
+.embed-container video {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: contain;
+}
